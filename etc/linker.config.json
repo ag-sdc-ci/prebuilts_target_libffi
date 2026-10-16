@@ -1,0 +1,19 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libffi.a-x86_64-v2.so",
+		    "libdummy_binary_libffi.a.so",
+		    "libdummy_ext_libffi-x86_64-v2.so",
+		    "libdummy_ext_libffi.so",
+		    "libdummy_headers_ext_libffi-x86_64-v2.so",
+		    "libdummy_headers_ext_libffi.so",
+		    "libdummy_pkgconfig_ext_libffi-x86_64-v2.so",
+		    "libdummy_pkgconfig_ext_libffi.so",
+		    "libffi-x86_64-v2.so",
+		    "libffi.so"
+	],
+	"requireLibs": [	
+		    "libc.so",
+		    "libdl.so"
+	],
+	"visible": true
+}

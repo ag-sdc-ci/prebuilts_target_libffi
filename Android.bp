@@ -1,0 +1,57 @@
+// Auto-generated prebuilt Blueprint for external/libffi
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.libffi
+
+package {
+    default_applicable_licenses: ["external_libffi_license"],
+}
+
+license {
+    name: "external_libffi_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-GPL",
+        "SPDX-license-identifier-GPL-2.0",
+        "SPDX-license-identifier-GPL-3.0",
+        "SPDX-license-identifier-LGPL",
+        "SPDX-license-identifier-LGPL-2.1",
+        "SPDX-license-identifier-MIT",
+        "SPDX-license-identifier-MPL",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "LICENSE",
+        "LICENSE-BUILDTOOLS",
+    ],
+}
+
+cc_library_headers {
+    name: "libffi_headers",
+    export_include_dirs: ["include"],
+    vendor_available: true,
+    host_supported: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+}
+
+cc_prebuilt_library {
+    name: "libffi",
+    export_include_dirs: ["include"],
+    host_supported: true,
+    vendor_available: true,
+    check_elf_files: false,
+    static: {
+        srcs: ["lib/libffi.a"],
+    },
+    shared: {
+        srcs: ["lib/libffi.so"],
+    },
+    prefer: true,
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.virt",
+    ],
+    min_sdk_version: "29",
+}
